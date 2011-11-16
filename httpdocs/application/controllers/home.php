@@ -41,7 +41,7 @@ class Home extends CI_Controller {
 		$data['utc_time'] = date($date_format, $epoch);
 		// Get the time in each of the selected locations
 		$times = array();
-		if(sizeof($this->input->get('compare')) > 0) {
+		if(isset($_GET['compare'])) {
 			foreach($this->input->get('compare') as $timezone){
 				$time = array();
 				date_default_timezone_set($timezone);
