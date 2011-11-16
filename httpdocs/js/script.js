@@ -19,7 +19,8 @@ function setDateTime(){
 		$('input[name=time]').val(time);
 	}
 	// date
-	var date = d.getFullYear() + '\/' + d.getMonth() + '\/' + d.getDate();
+	var month = d.getMonth() + 1;
+	var date = d.getFullYear() + '\/' + month + '\/' + d.getDate();
 	if($('input[name=date]').val() == '') {
 		$('input[name=date]').val(date);
 	}
